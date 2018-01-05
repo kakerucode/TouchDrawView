@@ -3,7 +3,7 @@
 //  DrawView
 //
 //  Created by liuxiang on 2017/12/25.
-//  Copyright © 2017年 liuxiang. All rights reserved.
+//  Copyright © 2018年 liuxiang. All rights reserved.
 //
 
 import UIKit
@@ -30,13 +30,13 @@ class DrawView: UIView {
     var brushType: BrushType = .pen
     var isForceTouch = false
     
-    private var brush: BaseBrush?
-    private var brushStack = [BaseBrush]()
-    private var drawUndoManager = UndoManager()
-    private var imageView = UIImageView()
-    private var drawImageView = UIImageView()
-    private var image: UIImage?
-    private var prevImage: UIImage?
+    fileprivate var brush: BaseBrush?
+    fileprivate var brushStack = [BaseBrush]()
+    fileprivate var drawUndoManager = UndoManager()
+    fileprivate var imageView = UIImageView()
+    fileprivate var drawImageView = UIImageView()
+    fileprivate var image: UIImage?
+    fileprivate var prevImage: UIImage?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -104,7 +104,7 @@ class DrawView: UIView {
     
     
     // MARK: - Private
-    private func initBrush() -> BaseBrush {
+    fileprivate func initBrush() -> BaseBrush {
         
         switch brushType {
         case .pen:
@@ -137,7 +137,6 @@ extension DrawView {
         brush?.lineAlpha = lineAlpha
         brush?.lineWidth = lineWidth
         brush?.points.append(touches.first!.location(in: self))
-        print("began")
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -151,7 +150,6 @@ extension DrawView {
             brush.currentPoint = touches.first?.location(in: self)
             brush.points.append(touches.first!.location(in: self))
             drawInContext(brush: brush)
-            print("moved")
         }
     }
     
@@ -172,12 +170,12 @@ extension DrawView {
         touchesEnded(touches, with: event)
     }
     
-    @objc private func popBrushStack() {
+    @objc fileprivate func popBrushStack() {
         drawUndoManager.registerUndo(withTarget: self, selector: #selector(pushBrushStack(_:)), object: brushStack.popLast())
         redrawInContext()
     }
     
-    @objc private func pushBrushStack(_ brush: BaseBrush) {
+    @objc fileprivate func pushBrushStack(_ brush: BaseBrush) {
         
         drawUndoManager.registerUndo(withTarget: self, selector: #selector(popBrushStack), object: nil)
         brushStack.append(brush)
@@ -188,7 +186,7 @@ extension DrawView {
 extension DrawView {
     
     // MARK: - Draw
-    private func drawInContext(brush: BaseBrush) {
+    fileprivate func drawInContext(brush: BaseBrush) {
         beginImageContext()
         prevImage?.draw(in: drawImageView.bounds)
         brush.drawInContext()
@@ -196,25 +194,25 @@ extension DrawView {
     }
     
     /// Begins the image context
-    private func beginImageContext() {
+    fileprivate func beginImageContext() {
         UIGraphicsBeginImageContextWithOptions(frame.size, false, UIScreen.main.scale)
     }
     
     /// Ends image context and sets UIImage to what was on the context
-    private func endImageContext() {
+    fileprivate func endImageContext() {
         
         drawImageView.image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
     }
     
     /// Draws the current image for context
-    private func drawCurrentImage() {
+    fileprivate func drawCurrentImage() {
         drawImageView.image?.draw(in: imageView.bounds)
     }
 
     
     // Redraw image for undo action
-    private func redrawInContext() {
+    fileprivate func redrawInContext() {
         beginImageContext()
         for brush in brushStack {
             brush.drawInContext()
@@ -224,7 +222,7 @@ extension DrawView {
     }
     
     // Redraw last line for redo action
-    private func redrawWithBrush(_ brush: BaseBrush) {
+    fileprivate func redrawWithBrush(_ brush: BaseBrush) {
         beginImageContext()
         prevImage?.draw(in: drawImageView.bounds)
         brush.drawInContext()
@@ -232,7 +230,7 @@ extension DrawView {
         prevImage = drawImageView.image
     }
     
-    private func clearDraw() {
+    fileprivate func clearDraw() {
         brushStack.removeAll()
         beginImageContext()
         endImageContext()

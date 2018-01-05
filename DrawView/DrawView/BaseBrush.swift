@@ -1,9 +1,8 @@
 //
 //  BaseBrush.swift
-//  BrushupApp
 //
 //  Created by liuxiang on 17/3/15.
-//  Copyright © 2017年 Dalian Fenrir. All rights reserved.
+//  Copyright © 2018年 liuxiang. All rights reserved.
 //
 
 import Foundation
