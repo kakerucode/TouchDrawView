@@ -28,14 +28,12 @@ class DrawView: UIView {
     var lineColor = UIColor.red
     var lineAlpha: CGFloat = 1  
     var brushType: BrushType = .pen
-    var isForceTouch = false
     
     fileprivate var brush: BaseBrush?
     fileprivate var brushStack = [BaseBrush]()
     fileprivate var drawUndoManager = UndoManager()
     fileprivate var imageView = UIImageView()
     fileprivate var drawImageView = UIImageView()
-    fileprivate var image: UIImage?
     fileprivate var prevImage: UIImage?
     
     required init?(coder aDecoder: NSCoder) {
@@ -55,21 +53,20 @@ class DrawView: UIView {
         brushType = type
     }
     
-    open func setLineColor(_ color: UIColor) {
+    open func setDrawLineColor(_ color: UIColor) {
         lineColor = color
     }
     
-    open func setLineWidth(_ width: CGFloat) {
+    open func setDrawLineWidth(_ width: CGFloat) {
         lineWidth = width
     }
     
-    open func setLineAlpha(_ alpha: CGFloat) {
+    open func setDrawLineAlpha(_ alpha: CGFloat) {
         lineAlpha = alpha
     }
     
     open func setImage(_ image: UIImage) {
         imageView.image = image
-        self.image = image
     }
     
     open func undo() {

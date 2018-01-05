@@ -55,16 +55,16 @@ class ViewController: UIViewController, DrawViewDelegate {
     }
     
     @IBAction func redAction() {
-        drawView.setLineColor(UIColor.red)
+        drawView.setDrawLineColor(UIColor.red)
     }
     
     @IBAction func greenAction() {
-        drawView.setLineColor(UIColor.green)
+        drawView.setDrawLineColor(UIColor.green)
         
     }
     
     @IBAction func blueAction() {
-        drawView.setLineColor(UIColor.blue)
+        drawView.setDrawLineColor(UIColor.blue)
     }
     
     @IBAction func alphaChanges(sender: UISlider) {

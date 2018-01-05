@@ -15,4 +15,6 @@ Than you can create `DrawView` from IB or programmatically init it in your code.
 - Multiple alpha values
 - Export the drawn image.
 
+## Requirement
+swift 3.2 or 4.0  \  Xcode 9.0
 
