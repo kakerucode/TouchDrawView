@@ -33,19 +33,25 @@ class DrawView: UIView {
     fileprivate var brushStack = [BaseBrush]()
     fileprivate var drawUndoManager = UndoManager()
     fileprivate var imageView = UIImageView()
-    fileprivate var drawImageView = UIImageView()
+    fileprivate var drawImageView = DrawImageView()
+
+    
     fileprivate var prevImage: UIImage?
+    fileprivate var image: UIImage?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.addSubview(imageView)
+//        self.addSubview(imageView)
         self.addSubview(drawImageView)
+        drawImageView.backgroundColor = UIColor.clear
     }
   
     // Sets the frames of the subviews
     override open func draw(_ rect: CGRect) {
-        imageView.frame = rect
-        drawImageView.frame = rect
+        image?.draw(in: bounds)
+//        imageView.frame = rect
+        drawImageView.frame = self.bounds
+        print("first")
     }
     
     // MARK: - Public
@@ -66,7 +72,9 @@ class DrawView: UIView {
     }
     
     open func setImage(_ image: UIImage) {
-        imageView.image = image
+//        imageView.image = image
+        self.image = image
+        self.setNeedsDisplay()
     }
     
     open func undo() {
@@ -127,6 +135,9 @@ extension DrawView {
         guard let allTouches = event?.allTouches else { return }
         if allTouches.count > 1 { return }
         brush = initBrush()
+        drawImageView.brush = brush
+        
+        
         brush?.beginPoint = touches.first?.location(in: self)
         brush?.currentPoint = touches.first?.location(in: self)
         brush?.previousPoint1 = touches.first?.previousLocation(in: self)
@@ -146,7 +157,22 @@ extension DrawView {
             brush.previousPoint1 = touches.first?.previousLocation(in: self)
             brush.currentPoint = touches.first?.location(in: self)
             brush.points.append(touches.first!.location(in: self))
-            drawInContext(brush: brush)
+//            drawInContext(brush: brush)
+            
+            if let penBrush = brush as? PenBrush {
+                var drawBox = penBrush.drawPathInBound()
+                drawBox.origin.x -= lineWidth * 1
+                drawBox.origin.y -= lineWidth * 1
+                drawBox.size.width += lineWidth * 2
+                drawBox.size.height += lineWidth * 2
+           
+                self.drawImageView.setNeedsDisplay(drawBox)
+                
+            } else {
+                drawInContext(brush: brush)
+            }
+            
+            
         }
     }
     
@@ -158,9 +184,15 @@ extension DrawView {
             delegate?.redoEnable(drawUndoManager.canRedo)
         }
 
-        touchesMoved(touches, with: event)        
-        prevImage = drawImageView.image
+        touchesMoved(touches, with: event)
+        
+//        prevImage = drawImageView.image
+        
+        
+        finishDrawing()
+        
         brush = nil
+        drawImageView.brush = nil
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -182,11 +214,32 @@ extension DrawView {
 
 extension DrawView {
     
+    
+    
+    fileprivate func finishDrawing() {
+        
+        UIGraphicsBeginImageContextWithOptions(bounds.size, false, UIScreen.main.scale)
+        
+        prevImage?.draw(in: self.bounds)
+        brush?.drawInContext()
+        prevImage = UIGraphicsGetImageFromCurrentImageContext()
+        drawImageView.image = prevImage
+        
+        UIGraphicsEndImageContext()
+        //        imageView.backgroundColor = UIColor.lightGray
+        //        self.addSubview(imageView)
+        //        imageView.frame = self.bounds
+        //        imageView.image = cacheImage
+        
+    }
+    
     // MARK: - Draw
     fileprivate func drawInContext(brush: BaseBrush) {
         beginImageContext()
         prevImage?.draw(in: drawImageView.bounds)
         brush.drawInContext()
+        
+        
         endImageContext()
     }
     
@@ -214,16 +267,25 @@ extension DrawView {
         for brush in brushStack {
             brush.drawInContext()
         }
+        
+        // TODO: 
+        drawImageView.image = UIGraphicsGetImageFromCurrentImageContext()
         endImageContext()
+        drawImageView.setNeedsDisplay()
+
         prevImage = drawImageView.image
     }
     
     // Redraw last line for redo action
     fileprivate func redrawWithBrush(_ brush: BaseBrush) {
         beginImageContext()
-        prevImage?.draw(in: drawImageView.bounds)
+        drawImageView.image?.draw(in: bounds)
         brush.drawInContext()
+//        drawImageView.brush = brush
         endImageContext()
+        
+        drawImageView.setNeedsDisplay()
+        
         prevImage = drawImageView.image
     }
     
@@ -236,6 +298,20 @@ extension DrawView {
         delegate?.undoEnable(false)
         delegate?.redoEnable(false)
     }
+}
+
+class DrawImageView: UIView {
+    
+    var image: UIImage?
+    var brush: BaseBrush?
+    
+    override func draw(_ rect: CGRect) {
+        image?.draw(in: bounds)
+        brush?.drawInContext()
+        
+    }
+    
+    
 }
 
 
