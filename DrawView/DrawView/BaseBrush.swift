@@ -19,7 +19,6 @@ enum BrushType {
 class BaseBrush: NSObject {
  
     var points = [CGPoint]()
-
     var beginPoint: CGPoint?
     var currentPoint: CGPoint?
     var previousPoint1: CGPoint?
@@ -27,11 +26,11 @@ class BaseBrush: NSObject {
     var lineWidth: CGFloat!
     var lineColor: UIColor!
     var lineAlpha: CGFloat!
+    var path = CGMutablePath()
 
     func drawInContext() {
         assert(false, "implements in subclass.")
     }
-    
     
     internal func initContext() -> CGContext? {
         let context = UIGraphicsGetCurrentContext()
