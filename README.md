@@ -1,4 +1,4 @@
-# DrawView
+# TouchDrawView
 A view with drawing functions. Include smooth path,rect,line,eraser and set drawing line alpha.
 ![](https://raw.githubusercontent.com/kakerucode/DrawView/master/screenshot.png)
 

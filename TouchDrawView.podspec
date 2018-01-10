@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.author       = { 'Kakeru' => 'kakerucode@gmail.com' }
   s.platform     = :ios, '9.0'
   s.source       = { :git => 'https://github.com/kakerucode/TouchDrawView.git', :tag => s.version }
-  s.source_files  = 'TouchDrawView/**/'
+  s.source_files  = 'TouchDrawView/**'
   s.frameworks = 'UIKit'
   s.requires_arc     = true
 
