@@ -10,7 +10,7 @@ import UIKit
 
 class EllipseBrush: BaseBrush {
     
-    override func drawInContext() {
+    internal override func drawInContext() {
         
         let context = initContext()
         context?.addEllipse(in: CGRect(origin: CGPoint(x: min(beginPoint!.x, currentPoint!.x), y: min(beginPoint!.y, currentPoint!.y)),

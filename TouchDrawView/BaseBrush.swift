@@ -1,7 +1,7 @@
 //
 //  BaseBrush.swift
 //
-//  Created by liuxiang on 17/3/15.
+//  Created by liuxiang on 2017/12/25.
 //  Copyright © 2018年 liuxiang. All rights reserved.
 //
 
@@ -14,6 +14,7 @@ enum BrushType {
     case rect
     case line
     case ellipse
+    case none
 }
 
 class BaseBrush: NSObject {

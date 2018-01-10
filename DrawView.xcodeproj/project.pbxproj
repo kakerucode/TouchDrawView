@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		E947C88E1FFE0CDC00F1BB09 /* LineBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = E947C88D1FFE0CDC00F1BB09 /* LineBrush.swift */; };
 		E9531F3B1FFF169800D87D37 /* EllipseBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9531F3A1FFF169800D87D37 /* EllipseBrush.swift */; };
-		E96CACD81FF09C8B0012C8A8 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96CACD71FF09C8B0012C8A8 /* DrawView.swift */; };
+		E96CACD81FF09C8B0012C8A8 /* TouchDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96CACD71FF09C8B0012C8A8 /* TouchDrawView.swift */; };
 		E96CACDA1FF0CF890012C8A8 /* PenBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96CACD91FF0CF890012C8A8 /* PenBrush.swift */; };
 		E976511E1FF22CDB005B7955 /* EraserBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976511D1FF22CDB005B7955 /* EraserBrush.swift */; };
 		E97651201FF242AA005B7955 /* RectBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976511F1FF242AA005B7955 /* RectBrush.swift */; };
@@ -43,7 +43,7 @@
 /* Begin PBXFileReference section */
 		E947C88D1FFE0CDC00F1BB09 /* LineBrush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineBrush.swift; sourceTree = "<group>"; };
 		E9531F3A1FFF169800D87D37 /* EllipseBrush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipseBrush.swift; sourceTree = "<group>"; };
-		E96CACD71FF09C8B0012C8A8 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		E96CACD71FF09C8B0012C8A8 /* TouchDrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchDrawView.swift; sourceTree = "<group>"; };
 		E96CACD91FF0CF890012C8A8 /* PenBrush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenBrush.swift; sourceTree = "<group>"; };
 		E976511D1FF22CDB005B7955 /* EraserBrush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EraserBrush.swift; sourceTree = "<group>"; };
 		E976511F1FF242AA005B7955 /* RectBrush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectBrush.swift; sourceTree = "<group>"; };
@@ -88,10 +88,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E9531F3C1FFF1B1400D87D37 /* DrawView */ = {
+		E9531F3C1FFF1B1400D87D37 /* TouchDrawView */ = {
 			isa = PBXGroup;
 			children = (
-				E96CACD71FF09C8B0012C8A8 /* DrawView.swift */,
+				E96CACD71FF09C8B0012C8A8 /* TouchDrawView.swift */,
 				E984DD621FE7951C00FF5786 /* BaseBrush.swift */,
 				E96CACD91FF0CF890012C8A8 /* PenBrush.swift */,
 				E976511D1FF22CDB005B7955 /* EraserBrush.swift */,
@@ -99,13 +99,14 @@
 				E947C88D1FFE0CDC00F1BB09 /* LineBrush.swift */,
 				E9531F3A1FFF169800D87D37 /* EllipseBrush.swift */,
 			);
-			path = DrawView;
+			path = TouchDrawView;
 			sourceTree = "<group>";
 		};
 		E984DD261FE7871800FF5786 = {
 			isa = PBXGroup;
 			children = (
-				E984DD311FE7871800FF5786 /* DrawView */,
+				E984DD311FE7871800FF5786 /* TouchDrawViewDemo */,
+				E9531F3C1FFF1B1400D87D37 /* TouchDrawView */,
 				E984DD461FE7871800FF5786 /* DrawViewTests */,
 				E984DD511FE7871900FF5786 /* DrawViewUITests */,
 				E984DD301FE7871800FF5786 /* Products */,
@@ -122,18 +123,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E984DD311FE7871800FF5786 /* DrawView */ = {
+		E984DD311FE7871800FF5786 /* TouchDrawViewDemo */ = {
 			isa = PBXGroup;
 			children = (
 				E984DD321FE7871800FF5786 /* AppDelegate.swift */,
 				E984DD341FE7871800FF5786 /* ViewController.swift */,
-				E9531F3C1FFF1B1400D87D37 /* DrawView */,
 				E984DD361FE7871800FF5786 /* Main.storyboard */,
 				E984DD391FE7871800FF5786 /* Assets.xcassets */,
 				E984DD3B1FE7871800FF5786 /* LaunchScreen.storyboard */,
 				E984DD3E1FE7871800FF5786 /* Info.plist */,
 			);
-			path = DrawView;
+			path = TouchDrawViewDemo;
 			sourceTree = "<group>";
 		};
 		E984DD461FE7871800FF5786 /* DrawViewTests */ = {
@@ -293,7 +293,7 @@
 				E976511E1FF22CDB005B7955 /* EraserBrush.swift in Sources */,
 				E984DD641FE7951C00FF5786 /* BaseBrush.swift in Sources */,
 				E97651201FF242AA005B7955 /* RectBrush.swift in Sources */,
-				E96CACD81FF09C8B0012C8A8 /* DrawView.swift in Sources */,
+				E96CACD81FF09C8B0012C8A8 /* TouchDrawView.swift in Sources */,
 				E984DD331FE7871800FF5786 /* AppDelegate.swift in Sources */,
 				E947C88E1FFE0CDC00F1BB09 /* LineBrush.swift in Sources */,
 				E96CACDA1FF0CF890012C8A8 /* PenBrush.swift in Sources */,
@@ -466,10 +466,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WWYFT5FQ5T;
-				INFOPLIST_FILE = DrawView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				INFOPLIST_FILE = "$(SRCROOT)/TouchDrawViewDemo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kakeru.touch.DrawView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kakeru.touch.TouchDrawView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -482,10 +482,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WWYFT5FQ5T;
-				INFOPLIST_FILE = DrawView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				INFOPLIST_FILE = "$(SRCROOT)/TouchDrawViewDemo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kakeru.touch.DrawView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kakeru.touch.TouchDrawView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

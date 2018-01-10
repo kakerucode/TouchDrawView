@@ -10,8 +10,7 @@ import UIKit
 
 class PenBrush: BaseBrush {
 
-    
-    func addPathInBound() -> CGRect {
+    internal func addPathInBound() -> CGRect {
         
         let mid1 = midPoint(p1: previousPoint1!, p2: previousPoint2!)
         let mid2 = midPoint(p1: currentPoint!, p2: previousPoint1!)
@@ -22,7 +21,7 @@ class PenBrush: BaseBrush {
         return subPath.boundingBoxOfPath
     }
     
-    override func drawInContext() {
+    internal override func drawInContext() {
         let context = initContext()
         context?.addPath(path)
         context?.strokePath()

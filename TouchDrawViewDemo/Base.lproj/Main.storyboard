@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Klw-aK-PTX" customClass="DrawView" customModule="DrawView" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Klw-aK-PTX" customClass="TouchDrawView" customModule="DrawView" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -52,13 +52,14 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jtj-wh-mlk">
-                                <rect key="frame" x="16" y="25" width="274" height="29"/>
+                                <rect key="frame" x="16" y="25" width="329" height="29"/>
                                 <segments>
                                     <segment title="Pen"/>
                                     <segment title="Line"/>
                                     <segment title="Rect"/>
                                     <segment title="Ellipse"/>
                                     <segment title="Eraser"/>
+                                    <segment title=""/>
                                 </segments>
                                 <connections>
                                     <action selector="brushActionWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="JCg-Pv-W7z"/>

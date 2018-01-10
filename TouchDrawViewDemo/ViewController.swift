@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, DrawViewDelegate {
+class ViewController: UIViewController, TouchDrawViewDelegate {
     
-    @IBOutlet weak var drawView: DrawView!
+    @IBOutlet weak var drawView: TouchDrawView!
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
 
@@ -41,15 +41,21 @@ class ViewController: UIViewController, DrawViewDelegate {
         switch sender.selectedSegmentIndex {
         case 0:
             drawView.setBrushType(.pen)
+            drawView.setDrawLineWidth(5)
         case 1:
             drawView.setBrushType(.line)
+            drawView.setDrawLineWidth(5)
         case 2:
             drawView.setBrushType(.rect)
+            drawView.setDrawLineWidth(5)
         case 3:
             drawView.setBrushType(.ellipse)
+            drawView.setDrawLineWidth(5)
         case 4:
             drawView.setBrushType(.eraser)
+            drawView.setDrawLineWidth(20)
         default:
+            drawView.setBrushType(.none)
             break
         }
     }

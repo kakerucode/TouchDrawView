@@ -8,21 +8,21 @@
 
 import UIKit
 
-protocol DrawViewDelegate {
+protocol TouchDrawViewDelegate {
     
     func undoEnable(_ isEnable: Bool)
     func redoEnable(_ isEnable: Bool)
 }
 
-extension DrawViewDelegate {
+extension TouchDrawViewDelegate {
     
     func undoEnable(_ isEnable: Bool) { }
     func redoEnable(_ isEnable: Bool) { }
 }
 
-class DrawView: UIView {
+class TouchDrawView: UIView {
     
-    var delegate: DrawViewDelegate?
+    var delegate: TouchDrawViewDelegate?
     
     var lineWidth: CGFloat = 5
     var lineColor = UIColor.red
@@ -93,13 +93,14 @@ class DrawView: UIView {
     
     open func exportImage() -> UIImage? {
         beginImageContext()
-        drawImageView.image?.draw(in: drawImageView.bounds)
+        self.image?.draw(in: self.bounds)
+        drawImageView.image?.draw(in: self.bounds)
         return UIGraphicsGetImageFromCurrentImageContext()
     }
     
     
     // MARK: - Private
-    fileprivate func initBrush() -> BaseBrush {
+    fileprivate func initBrush() -> BaseBrush? {
         
         switch brushType {
         case .pen:
@@ -112,12 +113,14 @@ class DrawView: UIView {
             return LineBrush()
         case .ellipse:
             return EllipseBrush()
+        case .none:
+            return nil
         }
     }
 
 }
 
-extension DrawView {
+extension TouchDrawView {
     
     // MARK: - UITouches
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -126,12 +129,7 @@ extension DrawView {
         if allTouches.count > 1 { return }
         brush = initBrush()
         drawImageView.brush = brush
-        if brush?.isKind(of: EraserBrush.self) == true {
-            lineWidth = 20
-        } else {
-            lineWidth = 5
-        }
-        
+   
         brush?.beginPoint = touches.first?.location(in: self)
         brush?.currentPoint = touches.first?.location(in: self)
         brush?.previousPoint1 =  touches.first?.previousLocation(in: self)
@@ -195,8 +193,7 @@ extension DrawView {
     }
 }
 
-extension DrawView {
-
+extension TouchDrawView {
     
     // MARK: - Draw
     
