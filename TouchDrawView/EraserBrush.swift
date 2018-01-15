@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EraserBrush: PenBrush {
+open class EraserBrush: PenBrush {
     
     override func drawInContext() {
         let context = initContext()

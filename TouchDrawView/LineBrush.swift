@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LineBrush: BaseBrush {
+open class LineBrush: BaseBrush {
 
     internal override func drawInContext() {
         let context = initContext()

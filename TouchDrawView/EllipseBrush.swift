@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EllipseBrush: BaseBrush {
+open class EllipseBrush: BaseBrush {
     
     internal override func drawInContext() {
         

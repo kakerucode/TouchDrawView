@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RectBrush: BaseBrush {
+open class RectBrush: BaseBrush {
     
     internal override func drawInContext() {
         let context = initContext()

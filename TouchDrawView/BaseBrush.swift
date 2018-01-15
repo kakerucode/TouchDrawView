@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum BrushType {
+public enum BrushType {
     case pen
     case eraser
     case rect
@@ -17,7 +17,7 @@ enum BrushType {
     case none
 }
 
-class BaseBrush: NSObject {
+open class BaseBrush: NSObject {
  
     var points = [CGPoint]()
     var beginPoint: CGPoint?

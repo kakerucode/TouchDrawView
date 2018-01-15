@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PenBrush: BaseBrush {
+open class PenBrush: BaseBrush {
 
     internal func addPathInBound() -> CGRect {
         

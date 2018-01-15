@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol TouchDrawViewDelegate {
+public protocol TouchDrawViewDelegate {
     
     func undoEnable(_ isEnable: Bool)
     func redoEnable(_ isEnable: Bool)
@@ -37,7 +37,7 @@ class TouchDrawView: UIView {
     fileprivate var prevImage: UIImage?
     fileprivate var image: UIImage?
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.addSubview(drawImageView)
         drawImageView.backgroundColor = UIColor.clear
@@ -123,7 +123,7 @@ class TouchDrawView: UIView {
 extension TouchDrawView {
     
     // MARK: - UITouches
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         guard let allTouches = event?.allTouches else { return }
         if allTouches.count > 1 { return }
@@ -139,7 +139,7 @@ extension TouchDrawView {
         brush?.points.append(touches.first!.location(in: self))
     }
     
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         guard let allTouches = event?.allTouches else { return }
         if allTouches.count > 1 { return }
@@ -164,7 +164,7 @@ extension TouchDrawView {
         }
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let brush = self.brush, brush.points.count >= 2 {
             brushStack.append(brush)
             drawUndoManager.registerUndo(withTarget: self, selector: #selector(popBrushStack), object: nil)
@@ -176,7 +176,7 @@ extension TouchDrawView {
         finishDrawing()
     }
     
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         touchesEnded(touches, with: event)
     }
     
