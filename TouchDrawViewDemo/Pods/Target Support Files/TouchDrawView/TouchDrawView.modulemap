@@ -1,0 +1,6 @@
+framework module TouchDrawView {
+  umbrella header "TouchDrawView-umbrella.h"
+
+  export *
+  module * { export * }
+}

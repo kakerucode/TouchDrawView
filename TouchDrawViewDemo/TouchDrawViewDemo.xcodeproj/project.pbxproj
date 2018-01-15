@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E42573857E44B72EEF8720F4 /* Pods_TouchDrawViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90C97BDAC4D58AA1AE83FE0 /* Pods_TouchDrawViewDemo.framework */; };
+		E907EF94200C81C500AFB0AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907EF93200C81C500AFB0AC /* AppDelegate.swift */; };
+		E907EF96200C81C500AFB0AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907EF95200C81C500AFB0AC /* ViewController.swift */; };
+		E907EF99200C81C500AFB0AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E907EF97200C81C500AFB0AC /* Main.storyboard */; };
+		E907EF9B200C81C500AFB0AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E907EF9A200C81C500AFB0AC /* Assets.xcassets */; };
+		E907EF9E200C81C500AFB0AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E907EF9C200C81C500AFB0AC /* LaunchScreen.storyboard */; };
+		E907EFA9200C81C600AFB0AC /* TouchDrawViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907EFA8200C81C600AFB0AC /* TouchDrawViewDemoTests.swift */; };
+		E907EFB4200C81C600AFB0AC /* TouchDrawViewDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907EFB3200C81C600AFB0AC /* TouchDrawViewDemoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E907EFA5200C81C600AFB0AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E907EF88200C81C500AFB0AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E907EF8F200C81C500AFB0AC;
+			remoteInfo = TouchDrawViewDemo;
+		};
+		E907EFB0200C81C600AFB0AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E907EF88200C81C500AFB0AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E907EF8F200C81C500AFB0AC;
+			remoteInfo = TouchDrawViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		041E519EF66A104639D169FC /* Pods-TouchDrawViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchDrawViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TouchDrawViewDemo/Pods-TouchDrawViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		2DCE4A988489F578DDEAAAC7 /* Pods-TouchDrawViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchDrawViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TouchDrawViewDemo/Pods-TouchDrawViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C90C97BDAC4D58AA1AE83FE0 /* Pods_TouchDrawViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TouchDrawViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E907EF90200C81C500AFB0AC /* TouchDrawViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchDrawViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E907EF93200C81C500AFB0AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E907EF95200C81C500AFB0AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E907EF98200C81C500AFB0AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E907EF9A200C81C500AFB0AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E907EF9D200C81C500AFB0AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E907EF9F200C81C500AFB0AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E907EFA4200C81C600AFB0AC /* TouchDrawViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchDrawViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E907EFA8200C81C600AFB0AC /* TouchDrawViewDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchDrawViewDemoTests.swift; sourceTree = "<group>"; };
+		E907EFAA200C81C600AFB0AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E907EFAF200C81C600AFB0AC /* TouchDrawViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchDrawViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E907EFB3200C81C600AFB0AC /* TouchDrawViewDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchDrawViewDemoUITests.swift; sourceTree = "<group>"; };
+		E907EFB5200C81C600AFB0AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E907EF8D200C81C500AFB0AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E42573857E44B72EEF8720F4 /* Pods_TouchDrawViewDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E907EFA1200C81C600AFB0AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E907EFAC200C81C600AFB0AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		980E6AA71AD0062146F70E20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C90C97BDAC4D58AA1AE83FE0 /* Pods_TouchDrawViewDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E907EF87200C81C500AFB0AC = {
+			isa = PBXGroup;
+			children = (
+				E907EF92200C81C500AFB0AC /* TouchDrawViewDemo */,
+				E907EFA7200C81C600AFB0AC /* TouchDrawViewDemoTests */,
+				E907EFB2200C81C600AFB0AC /* TouchDrawViewDemoUITests */,
+				E907EF91200C81C500AFB0AC /* Products */,
+				F60D38629B56C6D00576445D /* Pods */,
+				980E6AA71AD0062146F70E20 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E907EF91200C81C500AFB0AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E907EF90200C81C500AFB0AC /* TouchDrawViewDemo.app */,
+				E907EFA4200C81C600AFB0AC /* TouchDrawViewDemoTests.xctest */,
+				E907EFAF200C81C600AFB0AC /* TouchDrawViewDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E907EF92200C81C500AFB0AC /* TouchDrawViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E907EF93200C81C500AFB0AC /* AppDelegate.swift */,
+				E907EF95200C81C500AFB0AC /* ViewController.swift */,
+				E907EF97200C81C500AFB0AC /* Main.storyboard */,
+				E907EF9A200C81C500AFB0AC /* Assets.xcassets */,
+				E907EF9C200C81C500AFB0AC /* LaunchScreen.storyboard */,
+				E907EF9F200C81C500AFB0AC /* Info.plist */,
+			);
+			path = TouchDrawViewDemo;
+			sourceTree = "<group>";
+		};
+		E907EFA7200C81C600AFB0AC /* TouchDrawViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				E907EFA8200C81C600AFB0AC /* TouchDrawViewDemoTests.swift */,
+				E907EFAA200C81C600AFB0AC /* Info.plist */,
+			);
+			path = TouchDrawViewDemoTests;
+			sourceTree = "<group>";
+		};
+		E907EFB2200C81C600AFB0AC /* TouchDrawViewDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E907EFB3200C81C600AFB0AC /* TouchDrawViewDemoUITests.swift */,
+				E907EFB5200C81C600AFB0AC /* Info.plist */,
+			);
+			path = TouchDrawViewDemoUITests;
+			sourceTree = "<group>";
+		};
+		F60D38629B56C6D00576445D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2DCE4A988489F578DDEAAAC7 /* Pods-TouchDrawViewDemo.debug.xcconfig */,
+				041E519EF66A104639D169FC /* Pods-TouchDrawViewDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E907EF8F200C81C500AFB0AC /* TouchDrawViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E907EFB8200C81C600AFB0AC /* Build configuration list for PBXNativeTarget "TouchDrawViewDemo" */;
+			buildPhases = (
+				392C89A8155EC69517102059 /* [CP] Check Pods Manifest.lock */,
+				E907EF8C200C81C500AFB0AC /* Sources */,
+				E907EF8D200C81C500AFB0AC /* Frameworks */,
+				E907EF8E200C81C500AFB0AC /* Resources */,
+				C6A7DE4691BB694DDCA44496 /* [CP] Embed Pods Frameworks */,
+				4B7A244C12EB392138CD868D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TouchDrawViewDemo;
+			productName = TouchDrawViewDemo;
+			productReference = E907EF90200C81C500AFB0AC /* TouchDrawViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E907EFA3200C81C600AFB0AC /* TouchDrawViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E907EFBB200C81C600AFB0AC /* Build configuration list for PBXNativeTarget "TouchDrawViewDemoTests" */;
+			buildPhases = (
+				E907EFA0200C81C600AFB0AC /* Sources */,
+				E907EFA1200C81C600AFB0AC /* Frameworks */,
+				E907EFA2200C81C600AFB0AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E907EFA6200C81C600AFB0AC /* PBXTargetDependency */,
+			);
+			name = TouchDrawViewDemoTests;
+			productName = TouchDrawViewDemoTests;
+			productReference = E907EFA4200C81C600AFB0AC /* TouchDrawViewDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E907EFAE200C81C600AFB0AC /* TouchDrawViewDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E907EFBE200C81C600AFB0AC /* Build configuration list for PBXNativeTarget "TouchDrawViewDemoUITests" */;
+			buildPhases = (
+				E907EFAB200C81C600AFB0AC /* Sources */,
+				E907EFAC200C81C600AFB0AC /* Frameworks */,
+				E907EFAD200C81C600AFB0AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E907EFB1200C81C600AFB0AC /* PBXTargetDependency */,
+			);
+			name = TouchDrawViewDemoUITests;
+			productName = TouchDrawViewDemoUITests;
+			productReference = E907EFAF200C81C600AFB0AC /* TouchDrawViewDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E907EF88200C81C500AFB0AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = liuxiang;
+				TargetAttributes = {
+					E907EF8F200C81C500AFB0AC = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					E907EFA3200C81C600AFB0AC = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E907EF8F200C81C500AFB0AC;
+					};
+					E907EFAE200C81C600AFB0AC = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E907EF8F200C81C500AFB0AC;
+					};
+				};
+			};
+			buildConfigurationList = E907EF8B200C81C500AFB0AC /* Build configuration list for PBXProject "TouchDrawViewDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E907EF87200C81C500AFB0AC;
+			productRefGroup = E907EF91200C81C500AFB0AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E907EF8F200C81C500AFB0AC /* TouchDrawViewDemo */,
+				E907EFA3200C81C600AFB0AC /* TouchDrawViewDemoTests */,
+				E907EFAE200C81C600AFB0AC /* TouchDrawViewDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E907EF8E200C81C500AFB0AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E907EF9E200C81C500AFB0AC /* LaunchScreen.storyboard in Resources */,
+				E907EF9B200C81C500AFB0AC /* Assets.xcassets in Resources */,
+				E907EF99200C81C500AFB0AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E907EFA2200C81C600AFB0AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E907EFAD200C81C600AFB0AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		392C89A8155EC69517102059 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4B7A244C12EB392138CD868D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TouchDrawViewDemo/Pods-TouchDrawViewDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6A7DE4691BB694DDCA44496 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TouchDrawViewDemo/Pods-TouchDrawViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E907EF8C200C81C500AFB0AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E907EF96200C81C500AFB0AC /* ViewController.swift in Sources */,
+				E907EF94200C81C500AFB0AC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E907EFA0200C81C600AFB0AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E907EFA9200C81C600AFB0AC /* TouchDrawViewDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E907EFAB200C81C600AFB0AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E907EFB4200C81C600AFB0AC /* TouchDrawViewDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E907EFA6200C81C600AFB0AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E907EF8F200C81C500AFB0AC /* TouchDrawViewDemo */;
+			targetProxy = E907EFA5200C81C600AFB0AC /* PBXContainerItemProxy */;
+		};
+		E907EFB1200C81C600AFB0AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E907EF8F200C81C500AFB0AC /* TouchDrawViewDemo */;
+			targetProxy = E907EFB0200C81C600AFB0AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E907EF97200C81C500AFB0AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E907EF98200C81C500AFB0AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E907EF9C200C81C500AFB0AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E907EF9D200C81C500AFB0AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E907EFB6200C81C600AFB0AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E907EFB7200C81C600AFB0AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E907EFB9200C81C600AFB0AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DCE4A988489F578DDEAAAC7 /* Pods-TouchDrawViewDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WWYFT5FQ5T;
+				INFOPLIST_FILE = TouchDrawViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kakeru.touch.TouchDrawViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "";
+			};
+			name = Debug;
+		};
+		E907EFBA200C81C600AFB0AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 041E519EF66A104639D169FC /* Pods-TouchDrawViewDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WWYFT5FQ5T;
+				INFOPLIST_FILE = TouchDrawViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kakeru.touch.TouchDrawViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E907EFBC200C81C600AFB0AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WWYFT5FQ5T;
+				INFOPLIST_FILE = TouchDrawViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kakeru.touch.TouchDrawViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TouchDrawViewDemo.app/TouchDrawViewDemo";
+			};
+			name = Debug;
+		};
+		E907EFBD200C81C600AFB0AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WWYFT5FQ5T;
+				INFOPLIST_FILE = TouchDrawViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kakeru.touch.TouchDrawViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TouchDrawViewDemo.app/TouchDrawViewDemo";
+			};
+			name = Release;
+		};
+		E907EFBF200C81C600AFB0AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WWYFT5FQ5T;
+				INFOPLIST_FILE = TouchDrawViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kakeru.touch.TouchDrawViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TouchDrawViewDemo;
+			};
+			name = Debug;
+		};
+		E907EFC0200C81C600AFB0AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WWYFT5FQ5T;
+				INFOPLIST_FILE = TouchDrawViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kakeru.touch.TouchDrawViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TouchDrawViewDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E907EF8B200C81C500AFB0AC /* Build configuration list for PBXProject "TouchDrawViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E907EFB6200C81C600AFB0AC /* Debug */,
+				E907EFB7200C81C600AFB0AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E907EFB8200C81C600AFB0AC /* Build configuration list for PBXNativeTarget "TouchDrawViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E907EFB9200C81C600AFB0AC /* Debug */,
+				E907EFBA200C81C600AFB0AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E907EFBB200C81C600AFB0AC /* Build configuration list for PBXNativeTarget "TouchDrawViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E907EFBC200C81C600AFB0AC /* Debug */,
+				E907EFBD200C81C600AFB0AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E907EFBE200C81C600AFB0AC /* Build configuration list for PBXNativeTarget "TouchDrawViewDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E907EFBF200C81C600AFB0AC /* Debug */,
+				E907EFC0200C81C600AFB0AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E907EF88200C81C500AFB0AC /* Project object */;
+}
