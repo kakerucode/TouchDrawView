@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol TouchDrawViewDelegate {
+public protocol TouchDrawViewDelegate: class {
     
     func undoEnable(_ isEnable: Bool)
     func redoEnable(_ isEnable: Bool)
@@ -22,7 +22,7 @@ public extension TouchDrawViewDelegate {
 
 open class TouchDrawView: UIView {
     
-    var delegate: TouchDrawViewDelegate?
+    open weak var delegate: TouchDrawViewDelegate?
     
     var lineWidth: CGFloat = 5
     var lineColor = UIColor.red
@@ -91,6 +91,7 @@ open class TouchDrawView: UIView {
         clearDraw()
     }
     
+    // Export drawn image
     open func exportImage() -> UIImage? {
         beginImageContext()
         self.image?.draw(in: self.bounds)

@@ -21,7 +21,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-pod 'TouchDrawView', '~> 1.0.0'
+pod 'TouchDrawView'
 end
 ```
 
