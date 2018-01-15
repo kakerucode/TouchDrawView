@@ -14,13 +14,13 @@ public protocol TouchDrawViewDelegate {
     func redoEnable(_ isEnable: Bool)
 }
 
-extension TouchDrawViewDelegate {
+public extension TouchDrawViewDelegate {
     
     func undoEnable(_ isEnable: Bool) { }
     func redoEnable(_ isEnable: Bool) { }
 }
 
-class TouchDrawView: UIView {
+open class TouchDrawView: UIView {
     
     var delegate: TouchDrawViewDelegate?
     
